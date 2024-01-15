@@ -63,19 +63,12 @@ public class StudentRepo implements Repository<Student>{
 
     @Override
     public void update(Student student) {
-        for (Student student1 : students) {
 
-            if (student1.getId().equals(student.getId())){
-                student1.setName(student.getName());
-                student1.setLastname(student.getLastname());
-                student1.setPhone(student.getPhone());
-            }
-        }
 
     }
 
     @Override
     public void deleteById(UUID id) {
-        students.removeIf(obj-> obj.getId().equals(id));
+
     }
 }
